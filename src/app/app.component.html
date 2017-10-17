@@ -1,8 +1,16 @@
 <!--The content below is only a placeholder and can be replaced.-->
 
+<!--
+    {{title}} is 2-way data binding, looks for a variable named 'title' in AppComponent
+-->
+
+
 <h1>Welcome to {{title}}!</h1>
 
 <ul class="foods">
+    <!-- 
+        use the *ngFor to generate multiple items
+    -->
     <li *ngFor = "let food of foods"
     [class.selected] = "food === selectedFood" 
     (click) = "onSelect(food)">
@@ -10,3 +18,12 @@
     </li>
 </ul>
 
+<!--
+    *ngIf will remove its element if its expression evaluates as false
+  -->
+
+<div *ngIf="selectedFood">
+    <h2>
+        {{food.name}} is yummy!
+    </h2>
+</div>
