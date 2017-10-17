@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 
 class Food {
+	// unlike javascript, you can declare types in typescript
 	name: string;
 	isFavorite: boolean;
 }
@@ -20,6 +21,7 @@ const FOOD: Food[] = [
 	}
 ]
 
+// @Component decorator tells Angular that this is a component, the metadata connects it to its html and css
 @Component({
   	selector: 'app-root',
   	templateUrl: './app.component.html',
